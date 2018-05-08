@@ -1,0 +1,41 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	 Layout = null;
+	var home = @CurrentPage.Site();
+}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="@CurrentPage.metaDescription">
+    <meta name="keywords" content="@CurrentPage.metaKeywords">
+    <title>@CurrentPage.PageTitle</title>
+    <link href="/css/styles.css" type="text/css" rel="stylesheet"/>
+	<!--<link href="/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>-->
+	<script type="text/javascript" src="/scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="/scripts/modernizr.js"></script>
+	<script type="text/javascript" src="/scripts/jquery.bxslider.min.js"></script>
+	<!--<script type="text/javascript" src="/scripts/bootstrap.min.js"></script>-->
+	</head>
+
+   <body class="default-theme default-header banner responsive home-page">
+       
+
+	<div class="ltr">
+		@{Html.RenderPartial("header");}	
+	
+
+    <div id="page" class="page-global">
+		<section class="container top clearfix">
+    @RenderBody()
+   @{ Html.RenderPartial("footer");}
+ </div>
+
+  </body>
+</html>
+

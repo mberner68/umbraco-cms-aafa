@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@{
+		//get all children of type 'slide_item'
+    var slides = @CurrentPage.Children.Where("DocumentTypeAlias == \"slide_item\"");
+    }
+
+
+<section class="content float-left">
+    <ul class="bxslider">
+        @foreach (var slide in @slides)
+        {
+            //Fallback: Ignore slide when no image was uploaded,
+            //else the slide would cause a server error.
+            if (@slide.sliderImage != null)
+            {
+                <li><a href="@slide.pageLink"><img alt="@slide.name" src="@slide.imagelink"></a>
+                </li>
+            }
+        }
+    </ul>
+  </section>

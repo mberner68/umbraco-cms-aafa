@@ -1,0 +1,199 @@
+@charset "utf-8";
+/* CSS Document */
+.img-responsive {max-width: 100%; height: auto; display:block;}
+.certified_box {width:100%}
+.certified_box .video_div {float:left; width:50%}
+.certified_box .list_div {float:left; width:50%}
+.certified_box .image_div {float:left; width:50%}
+.fallallergy_box {width:100%}
+.fallallergy_box .divone {background-color:#fedcbf; padding:10px; width:40%; float:left; }
+.fallallergy_box .divtwo {background-color:#70bacc; padding:10px; width:40%; float:left; margin-left:5px;}
+.staff-wrapper {width:100%}
+.staff-col {width:50%; float:left}
+.pdf-wrapper {width:100%}
+.pdf-col {width:45%; float:left;}
+.advocacy_wrapper {width:100%; margin:0 auto}
+.advocacy_col {float:left; width:45%; padding:5px;}
+
+@media screen and (max-width:800px) {
+.fallallergy_box .divone {width:100%; float:none}
+.fallallergy_box .divtwo {width:100%; float:none}
+.advocacy_col {float:none; width:40%; padding:5px; margin: 0 auto;}
+}
+@media screen and (max-width:640px) {
+.fallallergy_box .divone {width:90%; float:none; margin-bottom:5px; margin-left:5px}
+.fallallergy_box .divtwo {width:90%; float:none; }
+.advocacy_col {float:none; width:90%; padding:5px; margin: 0 auto;}
+.certified_box .video_div {float:none; width:90%}
+.certified_box .image_div {float:none; width:90%}
+.certified_box .list_div {float:none; width:90%}
+.pdf-col {width:100%; float:none;}
+}
+@media screen and (max-width:768px){
+
+.fallallergy_box .divone {width:90%; float:none; margin-bottom:5px; margin-left:5px;}
+.fallallergy_box .divtwo {width:90%; float:none;}
+.pdf-col {width:40%; float:left; padding-right:5px}
+.advocacy_col {float:left; width:40%; padding:5px; margin: 0 auto;}
+}
+@media screen and (max-width:667px)
+{
+.staff-col {width:100%; float:none}
+.advocacy_col {float:none; width:90%; padding:5px; margin: 0 auto;}
+.pdf-col {width:100%; float:none;}
+.fallallergy_box .divone {width:90%; float:none; margin-bottom:5px; margin-left:5px}
+.fallallergy_box .divtwo {width:90%; float:none; clear:both;}
+.certified_box .video_div {float:none; width:90%}
+.certified_box .image_div {float:none; width:90%}
+.certified_box .list_div {float:none; width:90%}
+}
+@media screen and (max-width:568px) {
+.fallallergy_box .divone {width:90%; float:none; margin-bottom:5px; margin-left:5px}
+.fallallergy_box .divtwo {width:90%; float:none; clear:both;}
+.certified_box .video_div {float:none; width:90%}
+.certified_box .image_div {float:none; width:90%}
+.certified_box .list_div {float:none; width:90%}
+.staff-col {width:100%; float:none}
+.advocacy_col {float:none; width:90%; padding:5px; margin: 0 auto;}
+.pdf-col {width:100%; float:none;}
+}
+@media screen and (max-width:320px) {
+.fallallergy_box .divone {width:90%; float:none; margin-bottom:5px; margin-left: 5px;}
+.fallallergy_box .divtwo {width:90%; float:none;}
+.certified_box .video_div {float:none; width:90%}
+.certified_box .image_div {float:none; width:90%}
+.certified_box .list_div {float:none; width:90%}
+.advocacy_col {float:none; width:90%; padding:5px; margin: 0 auto;}
+.staff-col {width:100%; float:none}
+
+.pdf-col {width:100%; float:none;}
+}
+/*fundraising */
+.fundraising_icon {float:left; padding-right:10px}
+	.fundraising_sm_header {color:#27bac2; font-weight: bold}
+	.main_icon_box {width:100%}
+	.icons_box {width:20%; text-align:center; float:left }
+	 .icon_img {float:left;}
+   @media screen and (max-width: 800px)	
+   {
+	   
+	   .icons_box {width:20%}
+	   
+   }
+   @media screen and (max-width: 360px)
+	{
+		.icons_box {float:left; width:100%; text-align:left; margin-bottom:10px;}
+		.icon-text {float:left; margin-left:150px; margin-top:-90px; text-align:left}
+		.icon-text-support {float:left; margin-left:150px; margin-top:-75px; text-align:left} 
+		.icon-text-research {float:left; margin-left:150px; margin-top:-80px; text-align:left} 
+		
+	}
+	
+    @media screen and (max-width: 320px)
+    {
+		.icons_box {float:left; width:100%; text-align:left}
+		.icon-text {float:left; margin-left:150px; margin-top:-90px; text-align:left}
+		.icon-text-support {float:left; margin-left:150px; margin-top:-75px; text-align:left}
+		.icon-text-research {float:left; margin-left:150px; margin-top:-80px; text-align:left}
+		
+	}
+	
+/*Peak flow */
+.blue-box-asthma {border: solid 1px #e6fcff; background-color:#e6fcff; width:100%; overflow:hidden; padding-bottom:10px;}
+.blue-box-asthma p {margin: 10px;}
+.horizontal-list {list-style-type:none; text-align:center; -webkit-margin-before:0.05em; -webkit-margin-after:0.05em;
+-webkit-padding-start: 20px;}
+.actionplan, 
+.medicine, 
+.emergency, 
+.triggers,
+.understand {width:130px; float:left; padding:5px;}
+
+.clearfix {clear:both}
+@media screen and (max-width:1024px)
+{
+.actionplan, .medicine, .emergency, .triggers,.understand {width:130px;}
+}
+@media screen and (max-width:768px)
+{
+.triggers {clear:both;}
+}
+@media screen and (max-width:414px)
+{
+.triggers {clear:none}
+}
+
+/*eczema */
+.blue-box {border: solid 1px #e6fcff; padding:10px; background-color:#e6fcff; width:100%; overflow:hidden}
+.horizontal-list-skin {list-style-type:none; text-align:center; -webkit-margin-before:0.05em; -webkit-margin-after:0.05em;
+-webkit-padding-start: 40px;}
+.allergen, 
+.soap, 
+.rubber, 
+.metal,
+.scent,
+.formaldehyde {width:110px; float:left;}
+
+
+.clearfix {clear:both}
+
+@media screen and (max-width:600px)
+{
+
+.scent{clear:both}
+}
+
+@media screen and (max-width:384px)
+{
+
+.metal, .scent {clear:both}
+}
+/*State Honor roll */
+.main_logo_box {width:100%; margin:0 auto}
+.logo_box {
+    width: 30%;
+    text-align: center;
+    float: left;
+    
+}
+.state_data_box{width:40%; text-align:left; float:left; padding-left:12px;}
+.state_data_box h2{text-align:center}
+.state_box{width:25%; text-align:center; float:left}
+
+.main_heading_box {background-color:#005899; border:1px solid #005899; border-radius:0 15px 0 0; padding-top:7px;}
+.main_heading_box .header3 {color:#fff; margin-top:7px; margin-left:8px;}
+.sub_heading_box {font-weight:bold; color:#27bac2; font-style:italic; border-top:1px solid #000; border-right:1px solid #000; border-left:1px solid #000;}
+.sub_heading_box p {margin:0px 5px 0px 5px}
+.data_tables {border:1px solid black; width:100% }
+.grey_box {width:90%; color:#000; background-color:#e6e7e8; border:1px solid black; padding:8px}
+.grey_check {width:10%; color:#27bac2; background-color:#e6e7e8; border:1px solid black; text-align:center; padding:8px;}
+.no_color_box {
+    width: 90%;
+    border: 1px solid black;
+    padding:8px;
+}
+.no_check {width:10%; color:#d72027; border:1px solid black; text-align:center; padding:8px;}
+.policy_text {color:#d72027; font-weight:bold; padding:8px; }
+
+@media screen and (max-width:416px) {
+    .logo_box {
+        width: 35%;
+        text-align: center;
+        float:left;
+        padding-right:5px;
+    }
+    .state_data_box{width:55%; text-align:center; float:left;}
+    .state_box{width:30%; text-align:center}
+    .state_box img {width:70%}
+}
+
+/*Lung Functions*/
+.mobile-image {width:100%; display:none;}
+.lung-function-wrapper {width:100%;}
+.lung-function-text {width:70%; float:left; margin-left:10px}
+.lung-function-img {width:25%; float:left;}
+@media screen and (max-width:416px) {
+.mobile-image {width:100%; display:block; text-align:center}
+.lung-function-text {width:100%; float:none; margin-left:0px}
+.lung-function-img {display:none}
+}

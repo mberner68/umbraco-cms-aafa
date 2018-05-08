@@ -1,0 +1,34 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    @* Get the root of the website *@
+var root = CurrentPage.AncestorOrSelf(1);
+}
+
+
+    @foreach (var page in root.Children.Where("Visible"))
+    {
+        <li class="@(page.IsAncestorOrSelf(CurrentPage) ? "active " : null)">
+            <a href="@page.Url">@page.Name</a>
+            <ul class="nav nav-2">
+                @foreach (var page3 in page.Children.Where("Visible"))
+                {
+                    <li class="@(page3.IsAncestorOrSelf(CurrentPage) ? "active " : null)">
+                        <a href="@page3.Url">@page3.Name</a>
+                       @if (@page3.Children.Where("Visible").Count() > 0)
+                       {
+                           <ul class="nav nav-3">
+                            @foreach (var page4 in page3.Children.Where("Visible"))
+                            {
+                                <li class="@(page4.IsAncestorOrSelf(CurrentPage) ? "active " : null)">
+                                    <a href="@page4.Url">@page4.Name</a>
+                                </li>
+                            }
+                        </ul>
+                       }
+                    </li>
+
+                }
+            </ul></li>
+
+            }
+

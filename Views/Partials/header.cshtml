@@ -1,0 +1,97 @@
+﻿
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+<header class="header">
+    <div class="line-header">
+        <div class="container">
+            <nav class="nav-header navbar">
+                <ul class="nav">
+                 <!-- <li class="float-right"><a href="http://community.kidswithfoodallergies.org/login/redirect/http%3A%2F%2Fcommunity.kidswithfoodallergies.org%2F" id="aLogin">Log in</a></li>
+                    <li class="float-right"><a href="http://community.kidswithfoodallergies.org/join/redirect/http%3A%2F%2Fcommunity.kidswithfoodallergies.org%2F">Join</a></li>-->
+                   <li><a href="/page/make-a-donation.aspx" class="donation-top">Donate</a></li>
+					<li><a href="/page/health-care-professionals.aspx">Health Professionals</a></li>
+                    <li><a href="/page/aafa-partners.aspx">Partners</a></li>
+                    <li><a href="/page/media.aspx">Media</a></li>
+                    <li style="float:right; padding-right:15px"><a href="/page/subscribe.aspx" class="contact">Stay in Touch</a></li>      </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="banner-header">
+        <div class="container title-blog">
+            <div class="float-right btn-green"><a href="https://secure.aafa.org/donation.jsp?campaign=45&">Donate</a></div>
+            <div class="float-right btn-blue"><a href="https://community.aafa.org">Get Support</a></div>
+            <h1>
+                <a href="http://www.aafa.org/">AAFA</a>
+            </h1>
+            <div class="search float-right open-search">
+                <div class="btn-toggle-search" style="display:none;"></div>
+                Search: 
+                <label><input type="radio" name="searchType" id="resourceSearch" checked="checked"/> Resources</label>
+                <label><input type="radio" name="searchType" id="communitySearch"/> Community</label><br />                          
+                <input type="text"  id="searchfield" 
+                    value="Enter search term" class="tooltip-search" title="Press Enter to search">
+            </div>
+
+        </div>
+            <div class="container">
+            <div class="nav-toggle"></div>
+            <nav class="nav-top">
+                <ul> 
+				    <li><a href="/">Home</a></li>
+				     @{Html.RenderPartial("Navigation");}
+                    <li class="show-mob"><a href="/page/health-care-professionals.aspx">Health Professionals</a></li>
+                    <li class="show-mob"><a href="/page/aafa-partners.aspx">Partners</a></li>
+                    <li class="show-mob"><a href="/page/media.aspx">Media</a></li>
+                     <li class="show-mob"><a href="/page/donate-online.aspx">Donate</a></li>
+
+   </ul>
+            </nav>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('#04294c63-82d3-40c3-8e4c-ef1efc490cdb').remove();
+
+
+        $('#searchfield').keydown(function (e) {
+            var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+            if (key == 13) {
+                e.preventDefault();
+                kfaSearch();
+            }
+        });
+
+
+        function getSerachField() {
+            return document.getElementById('searchfield');
+        }
+
+        function searchClear(val) {
+            var d = getSerachField();
+            if (d.value == val)
+                d.value = '';
+        }
+        function searchFill(val) {
+            var d = getSerachField();
+            if (d.value != val)
+                d.value = val;
+        }
+
+        function kfaSearch() {
+            var d = getSerachField();
+            if (d.value != '') {
+                var url = '/search.aspx?q=' + encodeURIComponent(d.value);
+            if (document.getElementById('communitySearch').checked) {
+                    url = 'https://community.aafa.org/search?searching=true&queryString=' + encodeURIComponent(d.value);
+              }
+               
+				document.location.href = url;
+            }
+            return false;
+        }
+
+
+false;
+        }
+
+
+    </script>
+</header>

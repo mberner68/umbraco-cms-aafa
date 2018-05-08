@@ -1,0 +1,37 @@
+﻿.main_logo_box {width:100%; margin:0 auto}
+.logo_box {
+    width: 30%;
+    text-align: center;
+    float: left;
+    
+}
+.state_data_box{width:40%; text-align:left; float:left; padding-left:12px;}
+.state_data_box h2{text-align:center}
+.state_box{width:25%; text-align:center; float:left}
+
+.main_heading_box {background-color:#005899; border:1px solid #005899; border-radius:0 15px 0 0; padding-top:7px;}
+.main_heading_box .header3 {color:#fff; margin-top:7px; margin-left:8px;}
+.sub_heading_box {font-weight:bold; color:#27bac2; font-style:italic; border-top:1px solid #000; border-right:1px solid #000; border-left:1px solid #000;}
+.sub_heading_box p {margin:0px 5px 0px 5px}
+.data_tables {border:1px solid black; width:100% }
+.grey_box {width:90%; color:#000; background-color:#e6e7e8; border:1px solid black; padding:8px}
+.grey_check {width:10%; color:#27bac2; background-color:#e6e7e8; border:1px solid black; text-align:center; padding:8px;}
+.no_color_box {
+    width: 90%;
+    border: 1px solid black;
+    padding:8px;
+}
+.no_check {width:10%; color:#d72027; border:1px solid black; text-align:center; padding:8px;}
+.policy_text {color:#d72027; font-weight:bold; padding:8px; }
+
+@media screen and (max-width:416px) {
+    .logo_box {
+        width: 35%;
+        text-align: center;
+        float:left;
+        padding-right:5px;
+    }
+    .state_data_box{width:55%; text-align:center; float:left;}
+    .state_box{width:30%; text-align:center}
+    .state_box img {width:70%}
+}

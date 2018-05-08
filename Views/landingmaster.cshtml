@@ -1,0 +1,99 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="@CurrentPage.metaDescription">
+    <meta name="keywords" content="@CurrentPage.metaKeywords">
+    <title>@CurrentPage.PageTitle</title>
+    <link href="/css/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="/css/image-map-pro.min.css" rel="stylesheet" />
+    <link href="/css/squares.min.css" rel="stylesheet" />
+    <link href="/css/statehonorroll.css" rel="stylesheet" />
+     <script type="text/javascript" src="/scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="/scripts/modernizr.js"></script>
+	<script type="text/javascript" src="/scripts/jquery.bxslider.min.js"></script>
+	</head>
+
+   <body class="default-theme default-header banner responsive">
+       
+
+	<div class="ltr">
+		@{Html.RenderPartial("header");}
+       
+	    @RenderBody()
+
+        @{ Html.RenderPartial("footer");}
+ </div>
+<script>
+					  $('.asthmaallergiesnews').removeClass('widget');
+					  $('.asthmaallergiesnews').addClass('widget2');
+                      $('.asthmaallergiesnews').remove('<h4>');
+					</script>
+<script src="/scripts/image-map-pro.min.js" type="text/javascript"></script>
+        <script src="/scripts/supportgroups.js" type="text/javascript"></script>
+​
+	 <script src="/scripts/index.js" type="text/javascript"></script>
+        <script src="/scripts/matchMedia.js" type="text/javascript"></script>
+        <script src="/scripts/nav.dropdown.js" type="text/javascript"></script>
+         <script>
+
+             $("#").addClass("active");
+             $("#").addClass("active");
+             $(document).ready(function() {
+
+                 // only setup the nav if the user has matchMedia support
+                 if (window.matchMedia("only all").matches) {
+
+                     $(document).ready(function () {
+                         var nav = $(".nav-top"),
+                             navInstance;
+
+                         // construct dropdown instance
+                         nav.navDropdown({
+                             /* dropdown plugin options */
+                             toggleSelector: ".nav-toggle"
+                         });
+
+                         // store a reference to the nav instance
+                         navInstance = nav.data("navDropdown");
+
+
+                         // mobile breakpoint and handler
+                         var mobileQuery = "only screen and (max-width: 768px)",
+                             mobileMQ = window.matchMedia(mobileQuery);
+
+                         mobileMQ.listener = function () {
+                             if (window.matchMedia(mobileQuery).matches) {
+                                 navInstance.enable();
+                             }
+                             else {
+                                 navInstance.disable();
+                             }
+                         };
+
+                         // attach listener and trigger
+                         mobileMQ.addListener(mobileMQ.listener);
+
+                         // trigger listener to evaluate viewport size
+                         // since it won't fire on page load
+                         mobileMQ.listener();
+
+                     });
+
+                 }
+             });
+    </script>
+  </body>
+</html>
+
+
+
+
