@@ -1,0 +1,60 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+@using esg.PetaPoco.Models
+@using esg.PetaPoco.Repository
+@{
+    Layout = null;
+    var currentstate = "none";
+    var counter_v = 0;
+    var counter_i = 0;
+}
+    <h3>United States</h3>
+    @foreach (var SupportGroups in SupportGroup.GetAll())
+    {
+        if (@SupportGroups.typeg == "normal")
+        {
+           if (@currentstate != @SupportGroups.statename)
+           {
+            <h3>@SupportGroups.statename</h3>
+            currentstate = @SupportGroups.statename;
+           }
+            if (@SupportGroups.supportgroup == "Yes")
+            {
+             <p><strong>@SupportGroups.groupname</strong><br>
+            <strong>Area Served:</strong>@SupportGroups.areaserved<br/>
+            <strong>Audience:</strong>@SupportGroups.audience</p>
+            }
+            else 
+            {
+           <p>We&#39;re sorry, there are not any Educational 
+               Support Groups in your area at this time. If you would 
+               like to start an AAFA Educational Support Group in your 
+               community, please contact AAFA at 800-7-ASTHMA.</p>
+            }
+         }
+
+         if (@SupportGroups.typeg == "Virtual")
+         {
+             if (counter_v < 1 )
+             {
+             <h3>Virtual Groups</h3>
+             } 
+             counter_v = counter_v +1;
+             <h3>@SupportGroups.groupname</h3>
+             <p><strong>@SupportGroups.groupname</strong><br>
+            <strong>Area Served:</strong>@SupportGroups.areaserved<br/>
+            <strong>Audience:</strong>@SupportGroups.audience</p>
+         }
+         if (@SupportGroups.typeg == "International")
+         {
+             if (counter_i < 1 )
+             {
+             <h3>International Groups</h3>
+             } 
+             counter_i = counter_i +1;
+             
+             <h3>@SupportGroups.statename</h3>
+             <p><strong>@SupportGroups.groupname</strong><br>
+            <strong>Area Served:</strong>@SupportGroups.areaserved<br/>
+            <strong>Audience:</strong>@SupportGroups.audience</p>
+         }
+        }
